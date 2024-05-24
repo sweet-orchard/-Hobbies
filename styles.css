@@ -1,0 +1,940 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+:root {
+  --purple: #d8b8ff;
+  --black: #333533;
+  --yellow: #fcf19f;
+  --padding-page: max(10vw, 3rem);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.purple-container {
+  background-color: #d8b8ff;
+  border-bottom-left-radius: 5em;
+  border-bottom-right-radius: 5em;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--black);
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 2px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  transition: 0.3s ease-out all;
+  top: -200px;
+  left: 0;
+}
+
+.button:hover #slide {
+  top: 0;
+}
+
+.button-title {
+  position: relative;
+  transform: 0.3s ease-out all;
+}
+
+.title-link {
+  margin-bottom: 15px;
+  cursor: pointer;
+  width: fit-content;
+
+  transition: 300ms all ease;
+}
+
+.title-link:hover {
+  transform: scale(1.045);
+}
+
+.button:hover .button-title {
+  color: #333533;
+}
+
+.button2 {
+  background-color: var(--black);
+  user-select: none;
+  color: white;
+  width: fit-content;
+  padding: 2px 20px;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button2:active {
+  background-color: var(--purple);
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar {
+  user-select: none;
+  font-size: 1.7rem;
+  padding: 10px var(--padding-page);
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background-color: var(--purple);
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+
+  & #navLinks {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+
+    & div {
+      transition: all 0.1s ease;
+    }
+
+    & div:hover {
+      color: white;
+    }
+  }
+
+  & .title {
+    font-size: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.about-me-section {
+  padding-inline: var(--padding-page);
+  padding-top: 100px;
+  & img {
+    width: 400px;
+    height: fit-content;
+  }
+
+  & .about-me-container {
+    padding: 8rem;
+  }
+}
+
+.double-list {
+  width: 170px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 60px;
+  /* left: 45%; */
+  background-color: white;
+  color: var(--black);
+  padding: 20px;
+  border-radius: 10px;
+  outline: 2px solid black;
+}
+
+.double-list li:hover {
+  font-weight: 600;
+  border-bottom: 2px solid black;
+  margin-bottom: -2px;
+}
+
+.open {
+  display: flex;
+}
+
+.two-columns {
+  display: flex;
+}
+
+.hobbies-section {
+  padding-top: 80px;
+  padding-inline: var(--padding-page);
+  padding-bottom: 100px;
+
+  & .hobbies-section-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+}
+
+.card {
+  min-width: 200px;
+  max-width: 400px;
+  background-color: white;
+  padding: 10px;
+  position: relative;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    outline: 2px solid black;
+  }
+}
+
+.hobbies-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.tables-charts-section {
+  margin-top: 80px;
+  padding-inline: var(--padding-page);
+}
+
+.table-flex {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+}
+
+/* .table-card img {
+  width: 250px;
+} */
+
+.table-card {
+  padding: 5rem;
+  background-color: #f3f3f3;
+  cursor: pointer;
+
+  &:hover {
+    outline: 2px solid black;
+    background-color: #e3e3e3;
+  }
+}
+
+.activities-section {
+  margin-top: 80px;
+  padding-inline: var(--padding-page);
+  margin-bottom: 100px;
+}
+
+.form {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.activities-section input {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--black);
+  border-radius: 2px;
+  height: 3em;
+  padding: 10px;
+}
+
+footer {
+  background-color: var(--black);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: white;
+  padding: 30px var(--padding-page);
+  gap: 10px;
+}
+
+footer div > p {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    display: flex;
+    position: absolute;
+    right: var(--padding-page);
+    top: 1.5rem;
+    flex-direction: column;
+    width: 2.5em;
+    height: 2em;
+    gap: 5px;
+    z-index: 999;
+    align-items: end;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .line {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+
+  .line:nth-child(1) {
+    width: 70%;
+  }
+  .menu:hover .line:nth-child(1) {
+    width: 100%;
+  }
+
+  #navLinks {
+    flex-direction: column;
+    position: absolute;
+    top: 7rem;
+    gap: 0px !important;
+    width: 190px;
+    right: var(--padding-page);
+    background-color: var(--yellow);
+    border-radius: 10px;
+    border: 2px solid black;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 100ms ease;
+  }
+
+  .visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  #navLinks div:hover {
+    color: var(--purple);
+  }
+
+  #navLinks div {
+    color: black;
+    padding: 5px 20px;
+
+    &:hover {
+      background-color: #333533;
+    }
+  }
+  .double-list {
+    left: -16.5rem;
+  }
+
+  p {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  .two-columns img {
+    width: 300px;
+  }
+
+  .hobbies-section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 20px;
+  }
+
+  .card {
+    width: 230px;
+  }
+
+  .table-card img {
+    height: 200px;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .amigurumi-section > div img {
+    padding-inline: var(--padding-page);
+  }
+
+  .padding-round {
+    padding: 0 !important;
+  }
+
+  .padding-round2 {
+    padding: 0 !important;
+  }
+
+  .two-columns {
+    flex-direction: column;
+  }
+
+  .two-columns img {
+    width: 400px;
+  }
+
+  .about-me-container {
+    padding: 0 !important;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card img {
+    height: 300px;
+  }
+
+  .table-flex {
+    flex-wrap: wrap;
+  }
+
+  .table-card img {
+    width: 100%;
+    height: fit-content;
+  }
+}
+
+/* HOBBIES PAGE */
+.amigurumi-section {
+  padding-top: 100px;
+  padding-inline: var(--padding-page);
+
+  & h2 {
+    margin-top: 30px;
+  }
+}
+
+.amigurumi-section > .two-columns img {
+  width: 50rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.padding-round {
+  padding: 40px;
+}
+
+.round-edges {
+  border-radius: 10px;
+}
+
+.piano-section {
+  padding-top: 50px;
+  padding-inline: var(--padding-page);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.grid img {
+  width: 100%;
+}
+@media (max-width: 600px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+#piano {
+  background-color: var(--black);
+  width: 992px;
+  height: 290px;
+  margin: 80px auto;
+  padding: 90px 20px 0 20px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.keys {
+  background-color: #040404;
+  width: 949px;
+  height: 180px;
+  padding-left: 2px;
+  overflow: hidden;
+}
+
+.key {
+  background-color: #ffffff;
+  position: relative;
+  width: 41px;
+  height: 175px;
+  margin: 2px;
+  float: left;
+  border-radius: 0 0 3px 3px;
+}
+
+.key-pressed {
+  background-color: #d4d4d4;
+}
+
+.key.black--key::after {
+  background-color: #1d1e22;
+  content: "";
+  position: absolute;
+  left: -18px;
+  width: 32px;
+  height: 100px;
+  border-radius: 0 0 3px 3px;
+}
+
+@media (max-width: 768px) {
+  #piano {
+    width: 358px;
+  }
+
+  .keys {
+    width: 318px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+}
+
+.project-video {
+  width: 50rem;
+}
+
+.hobbies-title {
+  background-color: var(--yellow);
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* reading books section */
+.reading-books-section {
+  padding-inline: var(--padding-page);
+  padding-top: 50px;
+}
+
+.swiper {
+  position: relative;
+  width: 240px;
+  height: 370px;
+}
+
+.swiper-slide {
+  border-radius: 18px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.padding-round2 {
+  padding: 20px 70px;
+}
+
+.loving-cats-section {
+  padding-inline: var(--padding-page);
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+
+.cat-flex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+label {
+  font-size: 2rem;
+}
+
+.cat-flex {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 150px);
+  width: 100%;
+  gap: 20px;
+}
+
+#cat10 {
+  grid-column: 1;
+  grid-row: 1;
+  object-position: top;
+}
+
+#cat3 {
+  grid-column: 2;
+  grid-row: 1;
+  object-position: top;
+}
+
+#cat9 {
+  grid-column: 3/5;
+  grid-row: 1/3;
+}
+
+#cat8 {
+  grid-column: 5/7;
+  grid-row: 1/3;
+}
+
+#cat4 {
+  grid-column: 1/3;
+  grid-row: 2/4;
+}
+
+#cat7 {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#cat6 {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#cat11 {
+  grid-column: 3/6;
+  grid-row: 3/5;
+}
+
+#cat2 {
+  grid-column: 6/7;
+  grid-row: 3;
+}
+
+#cat5 {
+  grid-column: 6/7;
+  grid-row: 4;
+  object-position: top;
+}
+
+.cat-image-main {
+  width: 300px;
+}
+
+.artdrawing-section {
+  padding-inline: var(--padding-page);
+  padding-top: 50px;
+  margin-bottom: 100px;
+}
+.padding-top {
+  padding-top: 100px;
+}
+
+.artdrawing-section > div img {
+  width: 300px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.project-video {
+  border-radius: 10px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.table-card {
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .cat-flex {
+    grid-template-rows: repeat(4, 80px);
+  }
+
+  .project-video {
+    padding-inline: var(--padding-page);
+  }
+
+  .main-padding {
+    padding-inline: var(--padding-page);
+  }
+}
+
+.section-tables-charts {
+  padding-top: 100px;
+  padding-inline: var(--padding-page);
+}
+
+.section-tables-charts img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.float-right {
+  float: right;
+}
+
+.game-section {
+  padding-top: 100px;
+  padding-inline: var(--padding-page);
+  display: flex;
+  height: 80vh;
+}
+
+/* mini game styles */
+.div-colour-squares {
+  width: 15em;
+  height: 100%;
+  /* background-color: black; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 7px;
+}
+
+.colour-squares {
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 400ms ease;
+
+  &:hover {
+    transform: scale(1.05);
+    /* border: none; */
+  }
+}
+
+#colour1 {
+  background-color: rgb(234, 51, 35);
+}
+#colour2 {
+  background-color: rgb(238, 124, 48);
+}
+#colour3 {
+  background-color: rgb(243, 175, 61);
+}
+#colour4 {
+  background-color: rgb(248, 214, 73);
+}
+#colour5 {
+  background-color: rgb(255, 238, 49);
+}
+#colour6 {
+  background-color: rgb(177, 237, 74);
+}
+#colour7 {
+  background-color: rgb(93, 203, 60);
+}
+#colour8 {
+  background-color: rgb(67, 151, 153);
+}
+#colour9 {
+  background-color: rgb(32, 63, 166);
+}
+#colour10 {
+  background-color: rgb(53, 23, 170);
+}
+#colour11 {
+  background-color: rgb(105, 23, 167);
+}
+#colour12 {
+  background-color: rgb(190, 40, 115);
+}
+#colour13 {
+  background-color: rgb(30, 30, 30);
+}
+#colour14 {
+  background-color: rgb(137, 137, 137);
+}
+
+.empty-squares {
+  display: grid;
+  grid-template-columns: repeat(22, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+  width: 60vw;
+  height: 50em;
+  margin-left: 50px;
+}
+
+@media (max-width: 1000px) {
+  .empty-squares {
+    margin-left: 10px;
+  }
+}
+
+.empty-square {
+  border: 0.7px solid rgb(236, 236, 236);
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+
+#mainColour {
+  width: 50px;
+  height: 35px;
+
+  border: 2px solid black;
+}
+
+#rubber img {
+  width: 100%;
+}
+
+#rubber {
+  width: 50px;
+  transition: all 200ms ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.flex-column {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#clearAll img {
+  width: 100%;
+}
+
+#clearAll {
+  width: 40px;
+  transition: all 200ms ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+#rubber2 {
+  display: none;
+}
+
+#clearAll2 {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .game-section {
+    display: none !important;
+  }
+
+  #rubber2 {
+    display: block;
+  }
+
+  #clearAll2 {
+    display: block;
+  }
+
+  .game-section-phone {
+    padding-inline: var(--padding-page);
+    padding-top: 100px;
+  }
+
+  .div-colour-squares2 {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 10em;
+    gap: 2px;
+  }
+
+  .colour-squares2 {
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .empty-squares2 {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    width: 100%;
+    height: 30em;
+  }
+
+  .empty-square2 {
+    border: 1px solid rgb(229, 229, 229);
+  }
+
+  .flex-column2 {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #mainColour2 {
+    border: 2px solid black;
+  }
+
+  #rubber2 img {
+    width: 100%;
+  }
+
+  #clearAll2 img {
+    width: 90%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* .doubleA:hover {
+  color: black !important;
+} */

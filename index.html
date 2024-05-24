@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="purple-container">
+      <nav class="nav-bar">
+        <div class="title" id="logoHomeLink">
+          <a href="index.html">HOBBIES</a>
+        </div>
+        <ul>
+          <li id="navLinks">
+            <div><a href="index.html">Home</a></div>
+            <div class="align-center">
+              <a href="hobbies.html">Hobbies</a>
+              <span class="material-symbols-outlined icons" id="hobbiesLink">
+                arrow_drop_down
+              </span>
+            </div>
+            <div><a href="tables_charts.html">Tables & Charts</a></div>
+            <ul class="double-list" id="doubleList">
+              <li><a class="doubleA" href="amigurumi.html">Crocheting</a></li>
+              <li>
+                <a class="doubleA" href="piano-playing.html">Piano Playing</a>
+              </li>
+              <li>
+                <a class="doubleA" href="reading-books.html">Reading Book</a>
+              </li>
+              <li>
+                <a class="doubleA" href="loving-cats.html">Loving Cats</a>
+              </li>
+              <li>
+                <a class="doubleA" href="art-drawing.html">Art Drawing</a>
+              </li>
+            </ul>
+
+            <div><a href="draw in graph.html">Mini game</a></div>
+          </li>
+          <div class="menu" onclick="transformMenu()">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+          </div>
+        </ul>
+      </nav>
+      <section class="about-me-section">
+        <div class="two-columns align-center">
+          <img
+            class="home-image"
+            src="./images/picture of me.png"
+            alt="avatar picture"
+          />
+          <div class="about-me-container">
+            <h2>VIRA SAIENKO</h2>
+            <p>
+              Hello! My name is Vira! I’m 17 years old. I’m a Ukrainian girl.
+              I’m in love with cats and any pets.
+            </p>
+            <p>
+              I have quite plenty different kind of hobbies that I like to do
+              when I have a good mood and some free time.
+            </p>
+            <div class="button">
+              <div id="slide"></div>
+              <div class="button-title align-center" id="HobbiesDownBtn">
+                Hobbies<span class="material-symbols-outlined icons">
+                  arrow_downward
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hobbies-section" id="hobbiesSection">
+        <h2 class="title-link"><a href="hobbies.html">MY HOBBIES</a></h2>
+        <div class="hobbies-section-container">
+          <a href="amigurumi.html" class="doubleA">
+            <div class="card">
+              <div class="hobbies-image">
+                <img src="./images/spongebobs.jpeg" alt="spongebobs" />
+              </div>
+              <h3>Crocheting</h3>
+            </div>
+          </a>
+          <a href="piano-playing.html" class="doubleA">
+            <div class="card">
+              <div class="hobbies-image">
+                <img src="./images/piano.png" alt="" />
+              </div>
+              <h3>Piano Playing</h3>
+            </div>
+          </a>
+          <a href="reading-books.html" class="doubleA">
+            <div class="card">
+              <div class="hobbies-image">
+                <img src="./images/books.jpeg" alt="books" />
+              </div>
+              <h3>Reading Books</h3>
+            </div>
+          </a>
+          <a href="loving-cats.html" class="doubleA">
+            <div class="card">
+              <div class="hobbies-image">
+                <img src="./images/cats/cat 11.jpg" alt="me and a cat" />
+              </div>
+              <h3>Loving Cats</h3>
+            </div>
+          </a>
+          <a href="art-drawing.html" class="doubleA">
+            <div class="card">
+              <div class="hobbies-image">
+                <img src="./images/cat drawings.jpeg" alt="cat drawing" />
+              </div>
+              <h3>Art Drawing</h3>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <section class="tables-charts-section">
+      <h2 class="title-link">
+        <a href="tables_charts.html" class="doubleA">TABLES & CHARTS</a>
+      </h2>
+      <div class="table-flex">
+        <div class="table-card">
+          <img src="./images/chart.png" alt="chart image" />
+        </div>
+        <div class="table-card">
+          <img src="./images/table.png" alt="table image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="activities-section" id="activities">
+      <h2 class="title-link">ACTIVITIES</h2>
+      <div class="form">
+        <div>
+          <p>What character i can knit or crochet next?</p>
+          <input type="text" id="knitInput" />
+        </div>
+        <div>
+          <p>What book would you recommend me to read?</p>
+          <input type="text" id="bookInput" />
+        </div>
+        <div>
+          <p>
+            What music or song would you like me to learn and play on the piano
+            next time?
+          </p>
+          <input type="text" id="musicInput" />
+        </div>
+        <div>
+          <p>
+            Do you know any cats with whom I can take a picture together and add
+            to my collection?
+          </p>
+          <input type="text" id="catInput" />
+        </div>
+        <div
+          class="button2 align-center"
+          id="sentBtn"
+          onclick="resetFunction()"
+        >
+          SENT
+          <span class="material-symbols-outlined"> send </span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <img
+        src="https://media2.giphy.com/media/osjgQPWRx3cac/200w.gif?cid=6c09b952vtt7coblqru3h4i8y8b9jfd3ybvo9616nlplfrin&ep=v1_gifs_search&rid=200w.gif&ct=g"
+        alt="thank you gif"
+      />
+      <div>
+        <h3>Do you have any questions?</h3>
+        <p>Contact me</p>
+        <p>virasaienko@gmail.com</p>
+        <p>713784@student.cityofbristol.ac.uk</p>
+        <p>Level 2</p>
+        <p>Digital and IT skills</p>
+        <p>City of Bristol College</p>
+      </div>
+
+      <div>
+        <p>
+          I didn’t copy and paste any information from the Internet because it’s
+          all about me. I’ve used my own pictures of myself and other images
+          that I took are allowed to use. The target of the audience is near my
+          age (16-18). It will be interesting for teenagers because it was
+          writing in understandable language for them.
+        </p>
+      </div>
+    </footer>
+
+    <script src="coding.js"></script>
+  </body>
+</html>
